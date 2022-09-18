@@ -3,10 +3,13 @@ public class Person {
     protected String surname;
     protected int age;
 
+    protected  int nameLength1;
+
     public Person(String name, String surname, int age){
         this.name = name;
         this.surname = surname;
         this.age=age;
+        nameLength1 = surname.length();
     }
 
     public String getName() {
