@@ -9,7 +9,8 @@ public class Person {
         this.name = name;
         this.surname = surname;
         this.age = age;
-        nameLengthPerson = surname.length();
+        String[] sizeSurname = surname.split("\\P{IsAlphabetic}+");
+        nameLengthPerson = sizeSurname.length;
     }
 
     public String getName() {

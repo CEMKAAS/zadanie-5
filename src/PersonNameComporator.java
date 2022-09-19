@@ -10,6 +10,11 @@ public class PersonNameComporator implements Comparator<Person> {
 
     @Override
     public int compare(Person o1, Person o2) {
-        return nameLength >= o1.nameLengthPerson ? Integer.compare(o2.surname.length(), o1.surname.length()) : Integer.compare(o2.age, o1.age);
+        if(nameLength == o1.nameLengthPerson){
+            return Integer.compare(o2.age, o1.age);
+        }else if (o1.nameLengthPerson == o2.nameLengthPerson) {
+            return Integer.compare(o2.age, o1.age);
+        }
+        return Integer.compare(o2.nameLengthPerson, o1.nameLengthPerson);
     }
 }
